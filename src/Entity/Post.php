@@ -11,16 +11,28 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
  * @ORM\Table(name="symfony_demo_post")
  * @UniqueEntity(fields={"slug"}, errorPath="title", message="post.slug_unique")
+ * @ApiResource(
+ *     itemOperations={
+ *          "get"={
+ *              "controller"=App\Controller\Api\EmptyController::class,
+ *              "read"=false,
+ *              "deserialize"=false
+ *          }
+ *     },
+ *     collectionOperations={}
+ * )
  *
  * Defines the properties of the Post entity to represent the blog posts.
  *
@@ -49,6 +61,7 @@ class Post
      *
      * @ORM\Column(type="string")
      * @Assert\NotBlank
+     * @Groups({"read:full:comment"})
      */
     private $title;
 

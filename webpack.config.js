@@ -31,6 +31,7 @@ Encore
         useBuiltIns: 'usage',
         corejs: 3,
     })
+    .enableReactPreset()
 ;
 
 module.exports = Encore.getWebpackConfig();

@@ -66,4 +66,4 @@ sur les commentaires, je laisse le README de Symfony pour comprendre d'où provi
 mais de tous les contributeurs du projet de base de Symfony que vous pouvez retrouver sur <a href="https://github.com/symfony/demo">ce repos</a>.
 
 Je ne cherche en aucun cas à m'approprier le travail de Grafikart qui est fabuleux mais bien à mettre en lumière le cheminement de projets que j'ai pu faire
-en suivant ses cours et qui m'a permis, dans le cadre de ce tuto, de mettre en place ApiPlatform et React sur <a href="https://github.com/Supay3/portfolio">mon portfolio</a>.
+en suivant ses cours et qui m'a permis, dans le cadre de ce tuto, de mettre en place ApiPlatform et React sur mon portfolio.
